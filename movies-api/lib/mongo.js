@@ -14,7 +14,7 @@ class MongoLib {
     }
 
     connect() {
-        if(!MongoLib.connection()) {
+        if(!MongoLib.connection) {
             MongoLib.connection = new Promise((resolve, reject) => {
                 this.client.connect(err => {
                     if(err) {
